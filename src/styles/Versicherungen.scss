@@ -1,0 +1,82 @@
+.versicherungen {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  height: 42px;
+  padding: 0 10px;
+  &:hover {
+    font-weight: 600;
+    border-bottom: 8px solid #ffbb1c;
+    margin-top: 8px;
+  }
+}
+
+.versicherungen-content {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: absolute;
+  border: 4px solid #ffbb1c;
+  top: 42px;
+  left: 0px;
+  padding: 10px 20px;
+  margin-top: -4px;
+  color: #575757;
+  cursor: auto;
+  z-index: 1;
+  h1 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    white-space: nowrap;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    cursor: pointer;
+    color: #dddddd; //remove
+  }
+  a {
+    all: unset;
+    cursor: pointer;
+    color: #575757;
+    &:hover {
+      text-decoration: underline;
+      color: hsl(42, 100%, 45%);
+    }
+  }
+
+  .main-content {
+    border-bottom: 1px solid lightgray;
+    padding: 20px 0;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    .content-top,
+    .content-bottom {
+      display: flex;
+      gap: 50px;
+      .content-item {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  .fotter {
+    padding: 30px 0;
+    h1 {
+      font-weight: 400;
+    }
+    span {
+      color: #005ea8;
+      font-weight: 700;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

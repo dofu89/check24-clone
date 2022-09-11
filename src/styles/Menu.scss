@@ -1,0 +1,96 @@
+@import '~bootstrap/scss/bootstrap';
+
+.menu {
+  display: flex;
+  background-color: #084085;
+  height: 42px;
+  justify-content: center;
+  width: 100%;
+  color: white;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  max-width: 2000px;
+  width: 100%;
+  gap: 50px;
+  .list {
+    position: relative;
+    display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1220px;
+    min-width: 995px;
+    cursor: pointer;
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      line-height: 17px;
+      padding: 0 10px;
+      width: fit-content;
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
+  .punkte {
+    font-size: 20px;
+    line-height: 22px;
+    display: none;
+  }
+  @media (min-width: 1865px) {
+    .punkte {
+      display: flex;
+    }
+  }
+  span {
+    width: 200px;
+    text-align: right;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+//bootstrap
+.dropdown {
+  &:after,
+  :before {
+    all: unset;
+  }
+  &:hover {
+    background-color: transparent;
+    border-bottom: 5px solid #ffbb1c;
+    margin-top: 5px;
+    transition: none;
+  }
+  &:focus,
+  &:active {
+    background-color: #084085;
+
+    box-shadow: none;
+  }
+  background-color: transparent;
+  height: 42px;
+  border: none;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  height: 42px;
+  padding: 0 10px;
+  transition: none;
+  margin-top: 5px;
+  border-bottom: 5px solid transparent;
+}
+.btn {
+  box-shadow: none !important;
+  background-color: transparent;
+}
