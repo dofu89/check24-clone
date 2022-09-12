@@ -12,9 +12,6 @@ const FirstSlider = ({ type }) => {
         <div className='container-top'>
           <div className='fs-content'>
             <div className='content-desc'>
-              <div className='fs-controlls left'>
-                <ArrowBackIosIcon className='left' sx={{ fontSize: 60 }} />
-              </div>
               <h1>Deutschlands bester Vergleich</h1>
               <h1>für Kfz-Versicherungen</h1>
               <h3>
@@ -33,9 +30,6 @@ const FirstSlider = ({ type }) => {
               </h3>
             </div>
             <div className='kfz-img'>
-              <div className='fs-controlls right'>
-                <ArrowForwardIosIcon className='right' sx={{ fontSize: 60 }} />
-              </div>
               <img src={kfzFs} alt='' />
             </div>
           </div>

@@ -6,13 +6,18 @@ import LoginHome from '../components/LoginHome'
 import Footer from '../components/Footer'
 import ProductsSlider from '../components/ProductsSlider'
 
+import Carousel from 'react-elastic-carousel'
+
 const Home = () => {
   return (
-    <div className='home' id='top'>
+    <div className='home'>
       <Navbar />
       <Menu />
       <div className='home-container'>
-        <FirstSlider />
+        <Carousel itemsToShow={1}>
+          <FirstSlider />
+          <FirstSlider />
+        </Carousel>
         <LoginHome />
         <h1>
           Technik-Highlights entdecken und sparen <span>mehr</span>

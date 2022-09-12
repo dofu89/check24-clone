@@ -1,17 +1,30 @@
 import '../styles/ProductsSlider.scss'
 import Carousel from 'react-elastic-carousel'
 import { tehnoProducts } from '../utils/TehnoProducts'
-import { useState } from 'react'
+
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 
 const ProductsSlider = () => {
-  console.log(tehnoProducts)
+  const [products, setProduct] = useState(null)
+
+  useEffect(() => {
+    const getProducts = async () => {
+      const res = await axios.get('http://localhost:8000/api/products')
+      setProduct(res.data)
+    }
+    getProducts()
+  }, [])
+
+  console.log('FRONTEND', tehnoProducts)
+  console.log('BECKEND', products)
 
   return (
     <div className='products-slider'>
       <div className='products-slider-container'>
         <Carousel itemsToShow={5} itemsToScroll={5} transitionMs={1200}>
-          {tehnoProducts.map((product) => (
-            <div className='product' key={product.id}>
+          {products?.map((product) => (
+            <div className='product' key={product._id}>
               <div className='product-top'>
                 <div className='img-wrapper'>
                   <img src={product.img} alt={product.name} />
