@@ -4,6 +4,7 @@ import { tehnoProducts } from '../utils/TehnoProducts'
 
 import axios from 'axios'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const ProductsSlider = () => {
   const [products, setProduct] = useState(null)
@@ -16,42 +17,51 @@ const ProductsSlider = () => {
     getProducts()
   }, [])
 
-  console.log('FRONTEND', tehnoProducts)
-  console.log('BECKEND', products)
-
   return (
     <div className='products-slider'>
       <div className='products-slider-container'>
         <Carousel itemsToShow={5} itemsToScroll={5} transitionMs={1200}>
-          {products?.map((product) => (
-            <div className='product' key={product._id}>
-              <div className='product-top'>
-                <div className='img-wrapper'>
-                  <img src={product.img} alt={product.name} />
+          {!products ? (
+            <></>
+          ) : (
+            products?.map((product) => (
+              <Link to={`/products/${product._id}`} key={product._id}>
+                <div className='product'>
+                  <div className='product-top'>
+                    <div className='img-wrapper'>
+                      <img src={product.img} alt={product.name} />
+                    </div>
+                  </div>
+                  <div className='product-bottom'>
+                    <div className='p-desc'>{product.desc}</div>
+                    <div className='p-rating'>
+                      <span className='rating-star'>rating</span>
+                      <span className='rating-count'>
+                        {product.ratingCount}
+                      </span>
+                    </div>
+                    <span className='offer'>
+                      {product.availableSum} Angebote
+                    </span>
+                    <div className='p-discount'>
+                      <span className='old-price'>{product.odlPrice}$</span>
+                      <span className='discount'>-{product.discount}%</span>
+                    </div>
+                    <div className='p-price'>
+                      <span className='p-from'>ab</span>
+                      <span className='p-price-now'>
+                        {product.currentPrice} €
+                      </span>
+                    </div>
+                    <div className={product.premium ? 'p-premium' : 'p-none'}>
+                      Premium
+                    </div>
+                  </div>
+                  <div className='p-punkte'>{product.punkte}</div>
                 </div>
-              </div>
-              <div className='product-bottom'>
-                <div className='p-desc'>{product.desc}</div>
-                <div className='p-rating'>
-                  <span className='rating-star'>rating</span>
-                  <span className='rating-count'>{product.ratingCount}</span>
-                </div>
-                <span className='offer'>{product.availableSum} Angebote</span>
-                <div className='p-discount'>
-                  <span className='old-price'>{product.odlPrice}$</span>
-                  <span className='discount'>-{product.discount}%</span>
-                </div>
-                <div className='p-price'>
-                  <span className='p-from'>ab</span>
-                  <span className='p-price-now'>{product.currentPrice} €</span>
-                </div>
-                <div className={product.premium ? 'p-premium' : 'p-none'}>
-                  Premium
-                </div>
-              </div>
-              <div className='p-punkte'>{product.punkte}</div>
-            </div>
-          ))}
+              </Link>
+            ))
+          )}
         </Carousel>
       </div>
     </div>
