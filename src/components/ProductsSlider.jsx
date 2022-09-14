@@ -1,20 +1,19 @@
-import '../styles/ProductsSlider.scss'
-import Carousel from 'react-elastic-carousel'
-import { tehnoProducts } from '../utils/TehnoProducts'
-
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import Carousel from 'react-elastic-carousel'
+
+import { getProducts } from '../utils/productAPI'
+import '../styles/ProductsSlider.scss'
 
 const ProductsSlider = () => {
-  const [products, setProduct] = useState(null)
+  const [products, setProducts] = useState([])
 
   useEffect(() => {
-    const getProducts = async () => {
-      const res = await axios.get('http://localhost:8000/api/products')
-      setProduct(res.data)
+    const product = async () => {
+      const res = await getProducts()
+      setProducts(res.data)
     }
-    getProducts()
+    product()
   }, [])
 
   return (
