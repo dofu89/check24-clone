@@ -1,21 +1,16 @@
 import axios from 'axios'
 
-export const getTechnoProducts = async () => {
-  const res = await axios.get('http://localhost:8000/api/products/techno')
-  return res
+const config = {
+  baseURL: 'http://localhost:8000/api',
 }
 
-export const getBeautyProducts = async () => {
-  const res = await axios.get('http://localhost:8000/api/products/beauty')
-  return res
+const instance = axios.create(config)
+
+const productAPI = {
+  getTechnoProducts: instance.get('/products/techno'),
+  getBeautyProducts: instance.get('/products/beauty'),
+  getHouseholdProducts: instance.get('/products/household'),
+  getAllProducts: instance.get('/products/'),
 }
 
-export const getHouseholdProducts = async () => {
-  const res = await axios.get('http://localhost:8000/api/products/household')
-  return res
-}
-
-export const getAllProducts = async () => {
-  const res = await axios.get('http://localhost:8000/api/products/')
-  return res
-}
+export default productAPI

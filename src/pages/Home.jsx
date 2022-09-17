@@ -8,12 +8,7 @@ import LoginHome from '../components/LoginHome'
 import Footer from '../components/Footer'
 import ProductsSlider from '../components/ProductsSlider'
 
-import {
-  getTechnoProducts,
-  getBeautyProducts,
-  getHouseholdProducts,
-  getAllProducts,
-} from '../utils/productAPI'
+import productAPI from '../utils/productAPI'
 import '../styles/Home.scss'
 
 const Home = () => {
@@ -23,18 +18,42 @@ const Home = () => {
   const [allProducts, setAllProducts] = useState([])
 
   useEffect(() => {
-    const products = async () => {
-      const techno = await getTechnoProducts()
-      const beauty = await getBeautyProducts()
-      const household = await getHouseholdProducts()
-      const all = await getAllProducts()
-      setTechnoProducts(techno.data)
-      setBeautyProducts(beauty.data)
-      setHouseholdProducts(household.data)
-      setAllProducts(all.data)
+    const getTechnoProducts = async () => {
+      try {
+        const res = await productAPI.getTechnoProducts
+        setTechnoProducts(res.data)
+      } catch (err) {
+        console.log(err)
+      }
     }
-
-    products()
+    const getBeautyProducts = async () => {
+      try {
+        const res = await productAPI.getBeautyProducts
+        setBeautyProducts(res.data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    const getHouseholdProducts = async () => {
+      try {
+        const res = await productAPI.getHouseholdProducts
+        setHouseholdProducts(res.data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    const getAllProducts = async () => {
+      try {
+        const res = await productAPI.getAllProducts
+        setAllProducts(res.data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getTechnoProducts()
+    getBeautyProducts()
+    getHouseholdProducts()
+    getAllProducts()
   }, [])
 
   const type = allProducts.map((product) => product.type)
