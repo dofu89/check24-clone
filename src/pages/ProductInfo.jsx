@@ -1,10 +1,11 @@
-import '../styles/ProductInfo.scss'
 import { useEffect, useState } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
 import axios from 'axios'
 
 import Navbar from '../components/Navbar'
 import Menu from '../components/Menu'
+import productAPI from '../utils/productAPI'
+import '../styles/ProductInfo.scss'
 
 const ProductInfo = () => {
   const location = useLocation()
@@ -14,9 +15,7 @@ const ProductInfo = () => {
   const [product, setProduct] = useState(null)
   useEffect(() => {
     const fetchProduct = async () => {
-      const res = await axios.get(
-        `http://localhost:8000/api/products/${type}/${id}`
-      )
+      const res = await productAPI.getProductByTypeAndId(type, id)
       setProduct(res.data)
     }
     fetchProduct()

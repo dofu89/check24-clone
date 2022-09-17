@@ -17,39 +17,40 @@ const Home = () => {
   const [householdProducts, setHouseholdProducts] = useState([])
   const [allProducts, setAllProducts] = useState([])
 
+  const getTechnoProducts = async () => {
+    try {
+      const res = await productAPI.getTechnoProducts
+      setTechnoProducts(res.data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+  const getBeautyProducts = async () => {
+    try {
+      const res = await productAPI.getBeautyProducts
+      setBeautyProducts(res.data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+  const getHouseholdProducts = async () => {
+    try {
+      const res = await productAPI.getHouseholdProducts
+      setHouseholdProducts(res.data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+  const getAllProducts = async () => {
+    try {
+      const res = await productAPI.getAllProducts
+      setAllProducts(res.data)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   useEffect(() => {
-    const getTechnoProducts = async () => {
-      try {
-        const res = await productAPI.getTechnoProducts
-        setTechnoProducts(res.data)
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    const getBeautyProducts = async () => {
-      try {
-        const res = await productAPI.getBeautyProducts
-        setBeautyProducts(res.data)
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    const getHouseholdProducts = async () => {
-      try {
-        const res = await productAPI.getHouseholdProducts
-        setHouseholdProducts(res.data)
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    const getAllProducts = async () => {
-      try {
-        const res = await productAPI.getAllProducts
-        setAllProducts(res.data)
-      } catch (err) {
-        console.log(err)
-      }
-    }
     getTechnoProducts()
     getBeautyProducts()
     getHouseholdProducts()

@@ -11,6 +11,9 @@ const productAPI = {
   getBeautyProducts: instance.get('/products/beauty'),
   getHouseholdProducts: instance.get('/products/household'),
   getAllProducts: instance.get('/products/'),
+  getProductByTypeAndId(type, id) {
+    return instance.get(`/products/${type}/${id}`)
+  },
 }
 
 export default productAPI
