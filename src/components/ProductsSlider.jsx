@@ -1,30 +1,22 @@
-import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Carousel from 'react-elastic-carousel'
 
-import { getProducts } from '../utils/productAPI'
 import '../styles/ProductsSlider.scss'
 
-const ProductsSlider = () => {
-  const [products, setProducts] = useState([])
-
-  useEffect(() => {
-    const product = async () => {
-      const res = await getProducts()
-      setProducts(res.data)
-    }
-    product()
-  }, [])
-
+const ProductsSlider = ({ products, type }) => {
   return (
     <div className='products-slider'>
       <div className='products-slider-container'>
-        <Carousel itemsToShow={5} itemsToScroll={5} transitionMs={1200}>
+        <Carousel itemsToShow={4} itemsToScroll={4} transitionMs={1200}>
           {!products ? (
             <></>
           ) : (
             products?.map((product) => (
-              <Link to={`/products/${product._id}`} key={product._id}>
+              <Link
+                to={`/products/${product._id}`}
+                key={product._id}
+                state={{ type: product.type }}
+              >
                 <div className='product'>
                   <div className='product-top'>
                     <div className='img-wrapper'>
