@@ -1,0 +1,31 @@
+.product-info {
+}
+
+.product-info-container {
+  display: flex;
+  padding: 20px 50px;
+  gap: 50px;
+  .img-wrapper {
+    margin-top: 50px;
+  }
+  .pi-info {
+    max-width: 550px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    h1 {
+      font-size: 12px;
+      line-height: 16px;
+      color: #005ea8;
+    }
+    p {
+      font-size: 20px;
+    }
+    .pi-rating {
+      display: flex;
+      gap: 20px;
+      p {
+        font-size: 14px;
+        color: #005ea8;
+      }
+    }
+  }
+}

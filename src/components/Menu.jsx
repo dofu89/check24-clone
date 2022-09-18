@@ -17,7 +17,7 @@ const Menu = () => {
           <li>Hotel</li>
           <li>Mietwagen</li>
           <li>Profis</li>
-          <li>Shopping</li>
+          <li title='Shopping'>Shopping</li>
           <li>Steuer</li>
         </div>
         <div className='punkte'>Punkteteilnehmer werden: 5 € sichern</div>

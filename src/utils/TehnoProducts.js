@@ -20,7 +20,7 @@ export const tehnoProducts = [
     desc: 'AVM FRITZ!Fon C6 Black, DECT-Komforttelefon (hochwertiges Farbdisplay, HD-Telefonie, Internet-/Komfortdienste, Steuerung FRITZ!Box-Funktionen), VoIP-Telefon, schwarz',
     rating: 'rating stars',
     ratingCount: 2012,
-    availableSum: 32,
+    availableSum: 3,
     odlPrice: '205,90',
     discount: 61,
     currentPrice: '79,90',

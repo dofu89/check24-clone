@@ -10,6 +10,7 @@ const Versicherungen = () => {
       onMouseOver={() => setShow(true)}
       onMouseLeave={() => setShow(false)}
       className='versicherungen'
+      title='Versicherung'
     >
       Versicherung
       <div
