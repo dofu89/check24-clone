@@ -3,15 +3,19 @@ import Carousel from 'react-elastic-carousel'
 
 import '../styles/ProductsSlider.scss'
 
-const ProductsSlider = ({ products }) => {
+const ProductsSlider = ({ products, info }) => {
   const hasProducts = () => {
     return products && products.length > 0
   }
-
+  console.log(info)
   return (
-    <div className='products-slider'>
+    <div className={`products-slider ${info}`}>
       <div className='products-slider-container'>
-        <Carousel itemsToShow={4} itemsToScroll={4} transitionMs={1200}>
+        <Carousel
+          itemsToShow={info ? 5 : 4}
+          itemsToScroll={4}
+          transitionMs={1200}
+        >
           {hasProducts() &&
             products?.map((product) => (
               <Link
