@@ -6,7 +6,7 @@ A Check24 Clone with similar functionalities like real one.
 
 To runs the app in the development mode you need:
 
-In the project directory:
+In the root project directory:
 
 - `yarn install`, 
 
