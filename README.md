@@ -30,4 +30,4 @@ In the project directory:
 
 ### Some screenshots:
 
-<img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot.png" width="400" height="300">
+<img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot.png" width="800" height="600">
