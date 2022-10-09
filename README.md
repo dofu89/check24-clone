@@ -12,7 +12,7 @@ In the project directory:
 
 - `yarn start`,
 
-- start API: 'https://github.com/dofu89/check24-API'
+- start API: [Check24-API](https://github.com/dofu89/check24-API)
 
 
 ## Build with:
