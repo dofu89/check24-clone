@@ -17,4 +17,4 @@ In the project directory:
 
 ## Build with:
 
-- https://reactjs.org/
+- [![React][React.js]][React-url]
