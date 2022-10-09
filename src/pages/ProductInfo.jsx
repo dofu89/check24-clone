@@ -7,21 +7,16 @@ import Menu from '../components/Menu'
 import productAPI from '../features/products/productAPI'
 import '../styles/ProductInfo.scss'
 import ProductsSlider from '../components/ProductsSlider'
-import {
-  selectTechnoProducts,
-  selectBeautyProducts,
-  selectHouseholdProducts,
-} from '../features/products/productSlice'
 
 const ProductInfo = () => {
   const location = useLocation()
   const { type } = location.state
   const { id } = useParams()
-  const technoProducts = useSelector(selectTechnoProducts)
-  const beautyProducts = useSelector(selectBeautyProducts)
-  const householdProducts = useSelector(selectHouseholdProducts)
   const [product, setProduct] = useState(null)
   const [similarProducts, setSimilarProducts] = useState([])
+
+  const { technoProducts, beautyProducts, householdProducts, allProducts } =
+    useSelector((state) => state.products)
 
   useEffect(() => {
     const fetchProduct = async () => {

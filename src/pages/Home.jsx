@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import Carousel from 'react-elastic-carousel'
+import { useDispatch, useSelector } from 'react-redux'
 
 import Navbar from '../components/Navbar'
 import Menu from '../components/Menu'
@@ -7,7 +8,7 @@ import FirstSlider from '../components/FirstSlider'
 import LoginHome from '../components/LoginHome'
 import Footer from '../components/Footer'
 import ProductsSlider from '../components/ProductsSlider'
-import { useDispatch, useSelector } from 'react-redux'
+import UserModal from '../components/UserModal'
 
 import productAPI from '../features/products/productAPI'
 import {
@@ -15,19 +16,13 @@ import {
   setBeautyProducts,
   setHouseholdProducts,
   setAllProducts,
-  selectTechnoProducts,
-  selectBeautyProducts,
-  selectHouseholdProducts,
-  selectAllProducts,
 } from '../features/products/productSlice'
 import '../styles/Home.scss'
 
 const Home = () => {
   const dispatch = useDispatch()
-  const technoProducts = useSelector(selectTechnoProducts)
-  const beautyProducts = useSelector(selectBeautyProducts)
-  const householdProducts = useSelector(selectHouseholdProducts)
-  const allProducts = useSelector(selectAllProducts)
+  const { technoProducts, beautyProducts, householdProducts, allProducts } =
+    useSelector((state) => state.products)
 
   const getTechnoProducts = async () => {
     try {

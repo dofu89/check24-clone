@@ -7,7 +7,6 @@ const ProductsSlider = ({ products, info }) => {
   const hasProducts = () => {
     return products && products.length > 0
   }
-  console.log(info)
   return (
     <div className={`products-slider ${info}`}>
       <div className='products-slider-container'>
