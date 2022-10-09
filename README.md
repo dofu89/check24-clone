@@ -20,3 +20,8 @@ In the project directory:
 - React.js
 - SCSS
 - Redux
+
+## The app is in unfinished state. Things to be done:
+
+- Responsive Design
+- Authentication
