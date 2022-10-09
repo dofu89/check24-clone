@@ -31,7 +31,7 @@ In the project directory:
 ### Some screenshots:
 
 <p float="left">
-  <img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot.png" width="500" height="300">
+  <img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot.png" width="450" height="275">
   <img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot-1.png" width="500" height="300">
 </p>
 <p float="left">
