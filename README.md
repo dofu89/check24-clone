@@ -21,7 +21,7 @@ In the project directory:
 - SCSS
 - Redux
 
-## The app is in unfinished state. Things to be done:
+### The app is in unfinished state. Things to be done:
 
 - Responsive Design
 - Authentication
