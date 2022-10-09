@@ -20,6 +20,7 @@ In the project directory:
 - React.js
 - SCSS
 - Redux
+- react-router-dom: 6,
 
 ### The app is in unfinished state. Things to be done:
 
