@@ -31,3 +31,7 @@ In the project directory:
 ### Some screenshots:
 
 <img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot.png" width="500" height="300">
+<img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot-1.png" width="500" height="300">
+<img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot-2.png" width="500" height="300">
+<img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot-3.png" width="500" height="300">
+<img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot-4.png" width="500" height="300">
