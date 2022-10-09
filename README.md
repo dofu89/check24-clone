@@ -17,4 +17,4 @@ In the project directory:
 
 ## Build with:
 
-- [![React][React.js]][React-url]
+- React.js
