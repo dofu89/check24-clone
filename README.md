@@ -13,3 +13,8 @@ In the project directory:
 - `yarn start`,
 
 - start API: 'https://github.com/dofu89/check24-API'
+
+
+## Build with:
+
+- https://reactjs.org/
