@@ -1,10 +1,20 @@
 .product-info {
+  .pi-similar {
+    padding: 40px;
+    h1 {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 20px 0;
+    }
+  }
 }
 
 .product-info-container {
   display: flex;
   padding: 20px 50px;
   gap: 50px;
+  justify-content: center;
+  min-height: 400px;
   .img-wrapper {
     margin-top: 50px;
   }
@@ -25,6 +35,18 @@
       p {
         font-size: 14px;
         color: #005ea8;
+      }
+    }
+    .pi-price {
+      color: #c82d2d;
+      font-size: 14px;
+      .discount {
+        color: white;
+        //border: 1px solid #c82d2d;
+        padding: 2px 5px;
+        border-radius: 3px;
+        background-color: #c82d2d;
+        margin-left: 10px;
       }
     }
   }

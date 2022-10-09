@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import Carousel from 'react-elastic-carousel'
+import { useDispatch, useSelector } from 'react-redux'
 
 import Navbar from '../components/Navbar'
 import Menu from '../components/Menu'
@@ -7,20 +8,26 @@ import FirstSlider from '../components/FirstSlider'
 import LoginHome from '../components/LoginHome'
 import Footer from '../components/Footer'
 import ProductsSlider from '../components/ProductsSlider'
+import UserModal from '../components/UserModal'
 
-import productAPI from '../utils/productAPI'
+import productAPI from '../features/products/productAPI'
+import {
+  setTechnoProducts,
+  setBeautyProducts,
+  setHouseholdProducts,
+  setAllProducts,
+} from '../features/products/productSlice'
 import '../styles/Home.scss'
 
 const Home = () => {
-  const [technoProducts, setTechnoProducts] = useState([])
-  const [beautyProducts, setBeautyProducts] = useState([])
-  const [householdProducts, setHouseholdProducts] = useState([])
-  const [allProducts, setAllProducts] = useState([])
+  const dispatch = useDispatch()
+  const { technoProducts, beautyProducts, householdProducts, allProducts } =
+    useSelector((state) => state.products)
 
   const getTechnoProducts = async () => {
     try {
       const res = await productAPI.getTechnoProducts
-      setTechnoProducts(res.data)
+      dispatch(setTechnoProducts({ technoProducts: res.data }))
     } catch (err) {
       console.log(err)
     }
@@ -28,7 +35,7 @@ const Home = () => {
   const getBeautyProducts = async () => {
     try {
       const res = await productAPI.getBeautyProducts
-      setBeautyProducts(res.data)
+      dispatch(setBeautyProducts({ beautyProducts: res.data }))
     } catch (err) {
       console.log(err)
     }
@@ -36,7 +43,7 @@ const Home = () => {
   const getHouseholdProducts = async () => {
     try {
       const res = await productAPI.getHouseholdProducts
-      setHouseholdProducts(res.data)
+      dispatch(setHouseholdProducts({ householdProducts: res.data }))
     } catch (err) {
       console.log(err)
     }
@@ -44,7 +51,7 @@ const Home = () => {
   const getAllProducts = async () => {
     try {
       const res = await productAPI.getAllProducts
-      setAllProducts(res.data)
+      dispatch(setAllProducts({ allProducts: res.data }))
     } catch (err) {
       console.log(err)
     }
