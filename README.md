@@ -27,3 +27,6 @@ In the project directory:
 - 100% Responsive Design
 - Authentication
 - other Check24 functionalities
+
+### Some screenshots:
+
