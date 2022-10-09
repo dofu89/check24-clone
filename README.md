@@ -23,6 +23,6 @@ In the project directory:
 
 ### The app is in unfinished state. Things to be done:
 
-- Responsive Design
+- 100% Responsive Design
 - Authentication
 - other Check24 functionalities
