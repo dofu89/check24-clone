@@ -25,3 +25,4 @@ In the project directory:
 
 - Responsive Design
 - Authentication
+- other Check24 functionalities
