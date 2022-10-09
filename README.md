@@ -30,3 +30,4 @@ In the project directory:
 
 ### Some screenshots:
 
+!(https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot.png)
