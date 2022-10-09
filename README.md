@@ -18,3 +18,5 @@ In the project directory:
 ## Build with:
 
 - React.js
+- SCSS
+- Redux
