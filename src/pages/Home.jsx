@@ -20,6 +20,7 @@ import {
 import '../styles/Home.scss'
 
 const Home = () => {
+  const { user } = useSelector((state) => state.user)
   const dispatch = useDispatch()
   const { technoProducts, beautyProducts, householdProducts, allProducts } =
     useSelector((state) => state.products)
@@ -75,7 +76,8 @@ const Home = () => {
           <FirstSlider />
           <FirstSlider />
         </Carousel>
-        <LoginHome />
+        {!user && <LoginHome />}
+
         <h1>
           Technik-Highlights entdecken und sparen <span>mehr</span>
         </h1>

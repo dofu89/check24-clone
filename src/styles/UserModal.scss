@@ -4,7 +4,6 @@
   align-items: center;
   position: fixed;
   z-index: 1000;
-  color: red;
   background-color: rgba(0, 0, 0, 0.5);
   top: 0;
   left: 0;
@@ -15,13 +14,99 @@
 
 .login-modal-container {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  //gap: 40px;
   width: 500px;
   background-color: #fff;
   border: 1px solid #dcdcdc;
   top: 110px;
   left: 50%;
-  height: 400px;
+  //height: 400px;
   margin-left: -250px;
   z-index: 1001;
   cursor: auto;
+  .close-icon {
+    position: absolute;
+    top: -35px;
+    right: -10px;
+  }
+}
+
+.form-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding: 40px;
+  border-bottom: 1px solid #dcdcdc;
+  p {
+    all: none;
+    margin: 0;
+    font-size: 23px;
+    font-weight: normal;
+    line-height: 28px;
+  }
+  .input-form-modal {
+    display: flex;
+    align-items: center;
+    input {
+      border: 1px solid #dcdcdc;
+      border-radius: 5px;
+      padding: 6px 16px;
+      flex: 1;
+      font-size: 14px;
+      line-height: 35px;
+      height: 50px;
+      color: #666;
+      &:focus {
+        outline-style: none;
+        border: 1px solid #005ea8;
+      }
+    }
+  }
+  .button-modal {
+    background-color: #0271c2;
+    color: white;
+    font-size: 15px;
+    line-height: 20px;
+    height: auto;
+    padding: 10px 40px;
+    text-align: center;
+    font-weight: bold;
+    &:hover {
+      background-color: #015fa4;
+    }
+  }
+}
+
+.new-acc-modal {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 40px;
+  p {
+    all: none;
+    margin: 0;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 28px;
+    padding: 20px 0px;
+    span {
+      color: #005ea8;
+      cursor: pointer;
+      font-size: 12px;
+    }
+  }
+} //SecondLogin.jsx
+.form-user-exist {
+  .fue-welcome {
+    .fue-acc {
+      display: flex;
+      gap: 40px;
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
 }

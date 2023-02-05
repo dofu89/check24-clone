@@ -30,10 +30,11 @@
     li {
       display: flex;
       align-items: center;
+      justify-content: center;
       font-size: 14px;
       line-height: 17px;
       padding: 0 10px;
-      width: fit-content;
+      width: 170px;
       &:hover {
         font-weight: 600;
       }

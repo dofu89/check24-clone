@@ -1,12 +1,13 @@
-import { useState } from 'react'
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined'
+import { useSelector, useDispatch } from 'react-redux'
 
 import UserModal from './UserModal'
+import { setOpenModal } from '../features/users/userSlice'
 import '../styles/LoginHome.scss'
 
 const LoginHome = () => {
-  const [openModal, setOpenModal] = useState(false)
-  console.log(openModal)
+  const dispatch = useDispatch()
+  const { openModal } = useSelector((state) => state.user)
 
   return (
     <div className='login-home'>
@@ -19,7 +20,9 @@ const LoginHome = () => {
           Gutscheine, CHECK24 Punkte und exklusive Angebote für CHECK24 Kunden.
         </span>
         {openModal && <UserModal setOpenModal={setOpenModal} />}
-        <button onClick={() => setOpenModal(!openModal)}>anmelden</button>
+        <button onClick={() => dispatch(setOpenModal({ openModal: true }))}>
+          anmelden
+        </button>
       </div>
     </div>
   )

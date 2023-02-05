@@ -33,10 +33,10 @@ export const {
   setAllProducts,
 } = productSlice.actions
 
-export const selectTechnoProducts = (state) => state.products.technoProducts
+/*export const selectTechnoProducts = (state) => state.products.technoProducts
 export const selectBeautyProducts = (state) => state.products.beautyProducts
 export const selectHouseholdProducts = (state) =>
   state.products.householdProducts
-export const selectAllProducts = (state) => state.products.allProducts
+export const selectAllProducts = (state) => state.products.allProducts*/
 
 export default productSlice.reducer

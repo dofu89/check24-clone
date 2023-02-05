@@ -8,8 +8,8 @@ const Menu = () => {
       <div className='menu-container'>
         <div className='list'>
           <Versicherungen />
-          <li>Konto & Kredit</li>
-          <li>Strom & Gas</li>
+          <li style={{ width: 250 + 'px' }}>Konto & Kredit</li>
+          <li style={{ width: 250 + 'px' }}>Strom & Gas</li>
           <li>DSL</li>
           <li>Handy</li>
           <li>Reise</li>
