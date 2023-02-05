@@ -8,12 +8,11 @@ To runs the app in the development mode you need:
 
 In the root project directory:
 
-- `yarn install`, 
+- `yarn install`,
 
 - `yarn start`,
 
 - start API: [Check24-API](https://github.com/dofu89/check24-API)
-
 
 ## Build with:
 
@@ -25,7 +24,6 @@ In the root project directory:
 ### The app is in unfinished state. Things to be done:
 
 - 100% Responsive Design
-- Authentication
 - other Check24 functionalities
 
 ### Some screenshots:
@@ -41,4 +39,3 @@ In the root project directory:
 <p float="left">
   <img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot-4.png" width="500" height="300">
 </p>
-

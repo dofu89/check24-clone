@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { setOpenModal } from '../features/users/userSlice'
 
-const Register = ({ newUser }) => {
+const Register = ({ newUser, setUserEmail }) => {
   const dispatch = useDispatch()
   const [name, setName] = useState('')
   const [email] = useState(newUser)
@@ -60,7 +60,9 @@ const Register = ({ newUser }) => {
         </p>
       </form>
       <div className='fue-controlls'>
-        <a>zurück</a>
+        <a style={{ cursor: 'pointer' }} on onClick={() => setUserEmail(null)}>
+          zurück
+        </a>
         <button onClick={handleRegister}>register</button>
       </div>
     </div>

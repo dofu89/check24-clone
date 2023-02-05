@@ -76,17 +76,18 @@ const UserModal = () => {
               userEmail={userEmail.email}
               userExist={userEmail.user}
               email={email}
+              setUserEmail={setUserEmail}
             />
           )}
         </div>
-        {userEmail?.user == null && (
-          <div className='new-acc-modal'>
-            <p>
-              {footer}
-              <span onClick={handleState}>{toogle}</span>
-            </p>
-          </div>
-        )}
+
+        <div className='new-acc-modal'>
+          <p>
+            {footer}
+            <span onClick={handleState}>{toogle}</span>
+          </p>
+        </div>
+
         <HighlightOffIcon
           className='close-icon'
           sx={{ fontSize: 25, margin: 10 + 'px', color: 'white ' }}

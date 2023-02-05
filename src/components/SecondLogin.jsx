@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { setUser, setOpenModal } from '../features/users/userSlice'
 
-const SecondLogin = ({ userEmail }) => {
+const SecondLogin = ({ userEmail, setUserEmail }) => {
   const { user } = useSelector((state) => state.user)
   const dispatch = useDispatch()
   const [email] = useState(userEmail)
@@ -48,7 +48,9 @@ const SecondLogin = ({ userEmail }) => {
         <a>Passwort vergessen</a>
       </form>
       <div className='fue-controlls'>
-        <a>zurück</a>
+        <a style={{ cursor: 'pointer' }} on onClick={() => setUserEmail(null)}>
+          zurück
+        </a>
         <button onClick={handleLogin}>anmelden</button>
       </div>
     </div>

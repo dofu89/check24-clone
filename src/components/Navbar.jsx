@@ -8,14 +8,24 @@ import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone'
 import PhoneEnabledRoundedIcon from '@mui/icons-material/PhoneEnabledRounded'
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined'
 import { setUser, setOpenModal } from '../features/users/userSlice'
+import axios from 'axios'
 
 const Navbar = () => {
+  const token = JSON.parse(localStorage.getItem('user'))
   const { user } = useSelector((state) => state.user)
   const dispatch = useDispatch()
 
   const handleLogout = (e) => {
     e.preventDefault()
     return dispatch(setUser({ user: null })), localStorage.removeItem('user')
+  }
+
+  const handleClick = async () => {
+    const res = await axios.get('http://localhost:8000/api/users/test', {
+      headers: { authorization: token.token },
+    })
+
+    console.log(res.data)
   }
   return (
     <div className='navbar1'>
@@ -53,9 +63,11 @@ const Navbar = () => {
             <span>
               {user ? (
                 <div className='user'>
-                  <span> {user.name}</span>
+                  <span onClick={handleClick}> {user.name}</span>
                   {' / '}
-                  <span onClick={handleLogout}>Logout</span>
+                  <span style={{ color: 'red' }} onClick={handleLogout}>
+                    Logout
+                  </span>
                 </div>
               ) : (
                 <div
