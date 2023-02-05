@@ -6,7 +6,7 @@ A Check24 Clone with similar functionalities like real one.
 
 To runs the app in the development mode you need:
 
-In the project directory:
+In the root project directory:
 
 - `yarn install`, 
 
@@ -29,4 +29,16 @@ In the project directory:
 - other Check24 functionalities
 
 ### Some screenshots:
+
+<p float="left">
+  <img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot.png" width="500" height="300">
+  <img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot-1.png" width="500" height="300">
+</p>
+<p float="left">
+ <img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot-2.png" width="500" height="300">
+  <img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot-3.png" width="500" height="300">
+</p>
+<p float="left">
+  <img src="https://github.com/dofu89/check24-clone/blob/main/src/screenshots/screenshot-4.png" width="500" height="300">
+</p>
 
